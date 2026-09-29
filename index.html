@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kamal Thanki — I Keep Networks Alive</title>
+<meta name="description" content="Kamal Thanki — Infrastructure & Security engineer, Rajkot. Firewalls hardened, VPNs that never drop, uptime you can sleep on." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<meta name="theme-color" content="#070b16" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://media.licdn.com https://cdn.simpleicons.org data:; connect-src https://formsubmit.co; object-src 'none'; base-uri 'self'" />
+</head>
+<body>
+<div class="progress"><span id="progressFill"></span></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="u-net" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="5.5" cy="6" r="2.4"/><circle cx="18.5" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/>
+    <circle cx="5.5" cy="6" r=".7" fill="currentColor" stroke="none"/><circle cx="18.5" cy="6" r=".7" fill="currentColor" stroke="none"/><circle cx="12" cy="18" r=".7" fill="currentColor" stroke="none"/>
+    <path d="M7.7 7.2l2.9 8.4M16.3 7.2l-2.9 8.4M7.9 6h8.2"/>
+  </symbol>
+  <symbol id="u-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l7 2.8v5.4c0 4.8-3.4 7.6-7 8.8-3.6-1.2-7-4-7-8.8V5.8z"/>
+    <circle cx="12" cy="10.2" r="1.7"/><path d="M12 11.9v2.6"/>
+  </symbol>
+  <symbol id="u-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="8.5" cy="12" r="3.6"/><circle cx="8.5" cy="12" r=".8" fill="currentColor" stroke="none"/>
+    <path d="M12.1 12H21M17.5 12v3M20.5 12v2.2"/>
+  </symbol>
+  <symbol id="u-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="4.5" width="16" height="6" rx="1.5"/><rect x="4" y="13.5" width="16" height="6" rx="1.5"/>
+    <path d="M7.2 7.5h.01M7.2 16.5h.01M11 7.5h6M11 16.5h6"/>
+  </symbol>
+  <symbol id="u-backup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="12" cy="5.5" rx="7" ry="2.8"/>
+    <path d="M5 5.5v13c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8v-13M5 12c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8"/>
+    <path d="M12 21v-4.5M10 18.5L12 16.5l2 2"/>
+  </symbol>
+  <symbol id="u-audit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="10.5" cy="10.5" r="5.8"/><path d="M14.8 14.8L20 20"/>
+    <path d="M7.5 10.5l2-2 1.6 1.6 2.4-2.4"/>
+  </symbol>
+  <symbol id="u-py" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8.5 7L4.5 12l4 5M15.5 7l4 5-4 5M13.5 4.5l-3 15"/>
+  </symbol>
+  <symbol id="u-loop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12a7 7 0 0 1 12-4.9M17 4v3.2h-3.2M19 12a7 7 0 0 1-12 4.9M7 20v-3.2h3.2"/>
+    <circle cx="12" cy="12" r="1.6"/>
+  </symbol>
+  <symbol id="u-bash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3.5" y="5" width="17" height="14" rx="2"/>
+    <path d="M7.5 10l2.5 2.5-2.5 2.5M12.5 15.5H17"/>
+  </symbol>
+  <symbol id="u-hex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l7 4v10l-7 4-7-4V7z"/>
+    <path d="M9.5 10.5l2 2-2 2M13 14.5h2.5"/>
+  </symbol>
+  <symbol id="u-git" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="7" cy="5.5" r="2"/><circle cx="7" cy="18.5" r="2"/><circle cx="17" cy="9" r="2"/>
+    <path d="M7 7.5v9M7 13.5h4a4 4 0 0 0 4-4.5"/>
+  </symbol>
+  <symbol id="u-lab" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 3.5h4M10.5 3.5V9l-4.8 8.3a2 2 0 0 0 1.7 3.2h9.2a2 2 0 0 0 1.7-3.2L13.5 9V3.5"/>
+    <path d="M8 14.5h8"/>
+    <circle cx="11" cy="17.2" r=".9"/><circle cx="13.4" cy="18.4" r=".6"/>
+  </symbol>
+</svg>
+<canvas id="bg3d"></canvas>
+<div class="vignette"></div>
+
+<nav>
+  <a href="#top" class="logo">KT<span>.</span></a>
+  <div class="links">
+    <a href="#mission">Mission</a>
+    <a href="#services">Deployments</a>
+    <a href="#arsenal">Arsenal</a>
+    <a href="#log">Field log</a>
+    <a href="#contact" class="btn-nav">Hire me <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</nav>
+
+<!-- SCENE 00 · HERO -->
+<header class="scene hero" id="top" data-zone="0">
+  <div class="avatar-wrap">
+    <img class="avatar-img" id="avatarImg" src="https://media.licdn.com/dms/image/v2/D4D03AQFejPkpDB65XA/profile-displayphoto-shrink_200_200/B4DZYmIG8XGkAY-/0/1744396384572?e=2147483647&v=beta&t=lDOTbYkt5mxCrkm9y3iM8zXpql2T2cRQJsbSEpQJBM8" alt="Kamal Thanki" />
+    <div class="avatar-img avatar-fallback" id="avatarFallback" style="display:none">KT</div>
+    <span class="avatar-badge"><i class="fa-solid fa-circle-check"></i></span>
+  </div>
+  <p class="kicker glow-k">Infrastructure & Security · Rajkot, IN · <span class="live"><span class="dot"></span> systems nominal</span></p>
+  <h1 class="mega">KAMAL<br/><span class="grad">THANKI</span></h1>
+  <p class="tagline">I keep networks <em>alive</em> — hardened at the edge, connected everywhere, up while you sleep.</p>
+  <div class="cta">
+    <a class="btn primary" href="#contact">Hire me <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="btn" href="#mission">Enter the network ↓</a>
+  </div>
+  <div class="hero-stats">
+    <div><b>4+</b><span>years in the field</span></div>
+    <div><b>99.9%</b><span>uptime delivered</span></div>
+    <div><b>14/14</b><span>VPN tunnels up</span></div>
+  </div>
+  <div class="scroll-cue"><span></span></div>
+</header>
+
+<main>
+  <!-- SCENE 01 · MISSION -->
+  <section class="scene" id="mission" data-zone="1">
+    <p class="kicker">01 · The mission</p>
+    <h2 class="mega-sm">Firewalls <span class="grad">hardened.</span><br/>VPNs that never drop.<br/>Uptime you can <span class="grad2">sleep on.</span></h2>
+    <p class="lede">I'm Kamal — infrastructure & security engineer at TSS Consultancy (TrackWizz). I run the network like it owes me uptime: FortiGate + Sophos at the edge, VPN mesh across sites, Windows Server inside, and runbooks for everything that can break. Currently in the lab: <strong style="color:#fff">network automation with Python + Ansible, Linux automation with Bash</strong>.</p>
+  </section>
+
+  <!-- SCENE 02 · DEPLOYMENTS (services) -->
+  <section class="scene" id="services" data-zone="2">
+    <p class="kicker">02 · Deployments — pick your mission</p>
+    <h2 class="mega-sm">What I ship.</h2>
+    <div class="svc-grid">
+      <div class="svc tilt"><span class="num">01</span><i><svg class="uicon"><use href="#u-net"/></svg></i><b>Network Ops</b><p>Routers, switches, VLANs, site Wi-Fi — built, tuned, kept alive.</p><a href="#contact">Deploy →</a></div>
+      <div class="svc tilt"><span class="num">02</span><i><svg class="uicon"><use href="#u-shield"/></svg></i><b>Firewall Hardening</b><p>FortiGate + Sophos policies, HA pairs, IPS, lockdown audits.</p><a href="#contact">Deploy →</a></div>
+      <div class="svc tilt"><span class="num">03</span><i><svg class="uicon"><use href="#u-key"/></svg></i><b>VPN Mesh</b><p>IPsec site-to-site + SSL-VPN with MFA for every branch & laptop.</p><a href="#contact">Deploy →</a></div>
+      <div class="svc tilt"><span class="num">04</span><i><svg class="uicon"><use href="#u-server"/></svg></i><b>Servers</b><p>Windows AD/DNS/DHCP/GPO + RHEL basics. Patched & documented.</p><a href="#contact">Deploy →</a></div>
+      <div class="svc tilt"><span class="num">05</span><i><svg class="uicon"><use href="#u-backup"/></svg></i><b>Backup & DR</b><p>Scheduled backups, restore drills — outages, not disasters.</p><a href="#contact">Deploy →</a></div>
+      <div class="svc tilt"><span class="num">06</span><i><svg class="uicon"><use href="#u-audit"/></svg></i><b>Audit & Watch</b><p>Wireshark captures, Nmap sweeps, monitoring, SLA support.</p><a href="#contact">Deploy →</a></div>
+    </div>
+  </section>
+
+  <!-- SCENE 03 · ARSENAL -->
+  <section class="scene" id="arsenal" data-zone="3">
+    <p class="kicker">03 · The arsenal</p>
+    <h2 class="mega-sm">Loaded & <span class="grad">certified.</span></h2>
+    <div class="badges">
+      <span><img class="badge-img" src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco" loading="lazy" /> CCNA</span>
+      <span><svg class="badge-svg"><use href="#u-shield"/></svg> CEH</span>
+      <span><img class="badge-img" src="https://cdn.simpleicons.org/fortinet/EE3124" alt="Fortinet" loading="lazy" /> FortiGate</span>
+      <span><img class="badge-img" src="https://cdn.simpleicons.org/sophos/3A9ED4" alt="Sophos" loading="lazy" /> Sophos</span>
+    </div>
+    <div class="grid" id="skillsGrid"></div>
+    <h3 class="lab-h">🧪 In the lab — currently learning</h3>
+    <p class="lab-sub">No fake percentages here — these are loading. Follow the journey on LinkedIn.</p>
+    <div class="grid" id="learnGrid"></div>
+  </section>
+
+  <!-- SCENE 04 · FIELD LOG -->
+  <section class="scene" id="log" data-zone="4">
+    <p class="kicker">04 · Field log</p>
+    <h2 class="mega-sm">Receipts.</h2>
+    <div class="log">
+      <div class="log-item tilt"><span class="log-when">NOW · TSS Consultancy, Rajkot</span><p>Own infra + security for a fintech: dual firewalls, VPN mesh, Windows Server, zero unplanned downtime the day it mattered most. Closed every finding of a firewall VAPT + rule review.</p></div>
+      <div class="log-item tilt"><span class="log-when">BEFORE · Cinépolis</span><p>Multi-site network ops — VLAN segmentation with Cisco + FortiGate inter-VLAN routing, showtime-critical systems stayed online.</p></div>
+      <div class="log-item tilt"><span class="log-when">BEFORE · TCS iON</span><p>Large-scale endpoint readiness under pressure. Process, pace, delivery.</p></div>
+      <div class="log-item tilt lab"><span class="log-when">NEXT · Automation lab</span><p>Teaching the network to configure itself — Python + Ansible for devices, Bash + systemd for Linux. Lab notes landing soon.</p></div>
+    </div>
+    <p class="cert-strip">CCNA · CEH · Jetking Network Admin · Red Hat SA1</p>
+  </section>
+
+  <!-- SCENE 05 · UPLINK (contact) -->
+  <section class="scene" id="contact" data-zone="5">
+    <p class="kicker">05 · Uplink</p>
+    <h2 class="mega-sm">Let's build an<br/><span class="grad">unbreakable</span> network.</h2>
+    <p class="lede">Tell me about your network, your outage, or your open role. Messages land straight in my inbox.</p>
+    <form id="contactForm" class="uplink-form" novalidate>
+      <div class="f-row">
+        <input name="name" required maxlength="80" autocomplete="name" placeholder="Your name" id="fName" />
+        <input name="email" required maxlength="120" autocomplete="email" type="email" placeholder="Your email" />
+      </div>
+      <textarea name="message" required maxlength="2000" rows="5" placeholder="The mission: e.g. FortiGate HA setup, VPN mesh across 3 sites, firewall audit…"></textarea>
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <button class="btn primary big" type="submit" id="sendBtn"><i class="fa-solid fa-satellite-dish"></i> Transmit message</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+    <div class="alt-row">
+      <a href="https://linkedin.com/in/kamal-thanki-12b381189" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>KT<span class="grad">.</span> © 2026 — transmitted from Rajkot, IN</span>
+  <span class="foot-links"><a href="#top">Back to orbit ↑</a></span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/three-hero.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
